@@ -1,0 +1,20 @@
+{
+  "name": "bankloan",
+  "version": "1.0.0",
+  "description": "THis is use for loan approve Process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "camunda-external-task-client-js": "1.1.1",
+    "camunda-worker-node": "^7.1.0",
+    "ethereumjs-testrpc": "^3.0.3",
+    "ethereumjs-tx": "^1.3.7",
+    "solc": "^0.4.25",
+    "truffle-hdwallet-provider": "^1.0.6",
+    "web3": "^0.20.0"
+  }
+}
