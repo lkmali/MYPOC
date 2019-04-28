@@ -1,0 +1,40 @@
+<div class="modal-dialog">
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+
+      <h4> Consumer </h4>
+    </div>
+    <div class="modal-body">
+      <form role="form" #consumerForm="ngForm" (ngSubmit)="onSubmit(consumerForm.value)" autocomplete="off" novalidate>
+        <div class="form-group">
+          <label class="control-label"> ownerName</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="OwnerName" name="ownerName" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> Email</label>
+          <div class="input-group">
+            <input type="text" class="form-control"  required placeholder="Email"
+                   pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" name="email" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> originationName</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="originationName" name="originationName" ngModel>
+          </div>
+        </div>
+        <br>
+
+        <button type="submit" [disabled]="!consumerForm.form.valid" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+

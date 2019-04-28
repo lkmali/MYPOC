@@ -1,0 +1,55 @@
+<div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+
+      <h4> Farmer </h4>
+    </div>
+    <div class="modal-body">
+      <form role="form" #farmerForm="ngForm" (ngSubmit)="onSubmit(farmerForm.value)" autocomplete="off" novalidate>
+        <div class="form-group">
+          <label class="control-label"> ownerName</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="OwnerName" name="ownerName" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> Email</label>
+          <div class="input-group">
+            <input type="text" class="form-control" #farmerEmailRef="ngModel" required placeholder="Email"
+                   pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" name="email" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> field Area</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="field Area" name="fieldArea" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> fieldAddress</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="fieldAddress" name="fieldAddress" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> groundSoilType</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="groundSoilType" name="groundSoilType" ngModel>
+          </div>
+        </div>
+        <br>
+
+        <button type="submit" [disabled]="!farmerForm.form.valid" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+ 

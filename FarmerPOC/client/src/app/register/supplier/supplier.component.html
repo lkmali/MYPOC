@@ -1,0 +1,68 @@
+<div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4> Supplier </h4>
+    </div>
+    <div class="modal-body">
+      <form role="form" #supplierForm="ngForm" (ngSubmit)="onSubmit(supplierForm.value)" autocomplete="off" novalidate>
+        <div class="form-group">
+          <label class="control-label"> ownerName</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="OwnerName" name="ownerName" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> Email</label>
+          <div class="input-group">
+            <input type="text" class="form-control"  required placeholder="Email"
+                   pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" name="email" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> supplierName</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="supplierName" name="supplierName" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> supplierAddress</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="supplierAddress" name="supplierAddress" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> supplierArea</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="supplierArea" name="supplierArea" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> supplierMaxTemperature</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="supplierMaxTemperature" name="supplierMaxTemperature" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label"> supplierMinTemperature</label>
+          <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="supplierMinTemperature" name="supplierMinTemperature" ngModel>
+          </div>
+        </div>
+        <br>
+
+        <button type="submit" [disabled]="!supplierForm.form.valid" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+ 
